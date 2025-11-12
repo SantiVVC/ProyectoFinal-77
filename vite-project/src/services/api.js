@@ -1,0 +1,16 @@
+const API_URL = 'http://localhost:5000/api'; // URL de tu backend local
+
+// --- Juegos ---
+export async function getJuegos() {
+  const res = await fetch(`${API_URL}/juegos`);
+  return res.json();
+}
+
+export async function addJuego(juego) {
+  const res = await fetch(`${API_URL}/juegos`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(juego)
+  });
+  return res.json();
+}
