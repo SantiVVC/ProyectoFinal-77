@@ -180,7 +180,7 @@ select:focus {
 
 @media (max-width: 768px) {
   .contenedor {
-    width: 95%;
+    width: 94%;
   }
 
   .form-grid {
