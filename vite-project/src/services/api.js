@@ -14,3 +14,22 @@ export async function addJuego(juego) {
   });
   return res.json();
 }
+export async function deleteJuego(id) {
+  await fetch(`${API_URL}/juegos/${id}`, { method: 'DELETE' });
+}
+
+// --- Reseñas ---
+export async function getResenas() {
+  const res = await fetch(`${API_URL}/resenas`);
+  return res.json();
+}
+
+export async function addResena(resena) {
+  const res = await fetch(`${API_URL}/resenas`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(resena)
+  });
+  return res.json();
+}
+
