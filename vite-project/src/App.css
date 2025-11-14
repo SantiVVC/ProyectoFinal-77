@@ -1,112 +1,200 @@
-/* ======== GENERAL ======== */
-body {
-  background: #121212;
-  color: white;
+/* ------------------------------ */
+/*        ESTILOS GENERALES       */
+/* ------------------------------ */
+
+* {
   margin: 0;
-  font-family: 'Segoe UI', sans-serif;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
 }
+
+body {
+  background: linear-gradient(135deg, #2ecc71, #27ae60);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  padding: 40px;
+  color: white;
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* TREBOLES DE FONDO */
+body::before,
+body::after {
+  content: "🍀";
+  font-size: 180px;
+  position: absolute;
+  opacity: 0.06;
+  z-index: -1;
+}
+
+body::before {
+  top: 20px;
+  left: 20px;
+}
+
+body::after {
+  bottom: 20px;
+  right: 20px;
+}
+
+/* ------------------------------ */
+/*            TÍTULO              */
+/* ------------------------------ */
 
 h1 {
   text-align: center;
-  margin-top: 30px;
-  font-size: 32px;
-  color: #e5e5e5;
-}
-
-/* ======== FORMULARIO ======== */
-.formulario {
+  font-size: 40px;
+  margin-bottom: 25px;
+  text-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
   display: flex;
   justify-content: center;
-  align-items: end;
-  gap: 12px;
-  margin-top: 20px;
+  align-items: center;
+  gap: 10px;
 }
 
-.input {
-  padding: 10px;
-  border-radius: 6px;
-  border: 1px solid #444;
-  background: #1e1e1e;
-  color: white;
-  width: 180px;
+.icono {
+  font-size: 40px;
 }
 
-.input:focus {
-  outline: 2px solid #6a5acd;
+/* ------------------------------ */
+/*        CONTENEDOR PRINCIPAL    */
+/* ------------------------------ */
+
+.contenedor {
+  width: 900px;
+  background: rgba(0, 0, 0, 0.18);
+  padding: 40px;
+  border-radius: 25px;
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(4px);
 }
 
-.campo-puntuacion {
-  display: flex;
-  flex-direction: column;
-  color: white;
+/* ------------------------------ */
+/*          FORMULARIO JUEGO      */
+/* ------------------------------ */
+
+form {
+  background: white;
+  padding: 25px;
+  border-radius: 20px;
+  margin-bottom: 30px;
+  color: #1e8449;
+  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.15);
+  display: grid;
+  gap: 15px;
 }
 
-.label {
-  margin-bottom: 4px;
-  font-size: 14px;
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
 }
 
-.input-num {
-  width: 60px;
-  padding: 10px;
-  border-radius: 6px;
-  border: 1px solid #444;
-  background: #1e1e1e;
-  color: white;
+input,
+select {
+  width: 100%;
+  padding: 12px;
+  border-radius: 12px;
+  border: 2px solid #2ecc71;
+  font-size: 15px;
+  background: #eaffea;
+  transition: 0.2s ease;
+}
+
+input:focus,
+select:focus {
+  border-color: #1e8449;
+  outline: none;
 }
 
 .btn-agregar {
-  padding: 10px 20px;
-  background: #6a5acd;
-  border: none;
-  border-radius: 6px;
+  width: 100%;
+  background: #1e8449;
   color: white;
+  border: none;
+  padding: 14px;
+  border-radius: 12px;
   cursor: pointer;
-  transition: 0.2s;
+  font-weight: bold;
+  font-size: 17px;
+  transition: 0.2s ease;
 }
 
 .btn-agregar:hover {
-  background: #7c6df2;
+  background: #27ae60;
 }
 
-/* ======== TARJETAS ======== */
-.contenedor-tarjetas {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin-top: 30px;
-}
+/* ------------------------------ */
+/*            CARD JUEGO          */
+/* ------------------------------ */
 
 .card {
-  background: #1e1e1e;
-  border-radius: 12px;
-  width: 230px;
-  padding: 20px;
-  margin: 15px;
-  box-shadow: 0px 4px 15px rgba(0,0,0,0.4);
-  transition: transform 0.2s ease, box-shadow 0.3s ease;
-}
-
-.card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0px 6px 20px rgba(0,0,0,0.6);
-}
-
-.card h3 {
-  margin-top: 0;
-  color: #a78bfa;
-}
-
-.card button {
-  background: #e63946;
-  border: none;
+  background: #27ae60;
+  padding: 25px;
+  margin: 20px 0;
+  border-radius: 18px;
   color: white;
-  padding: 8px 12px;
-  border-radius: 6px;
-  cursor: pointer;
-  margin-top: 15px;
+  box-shadow: 0 5px 18px rgba(0, 0, 0, 0.25);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.card button:hover {
-  background: #ff4e5c;
+.card .info {
+  font-size: 17px;
+}
+
+.card h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+/* Botón eliminar */
+.btn-eliminar {
+  background: #e74c3c;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 14px;
+  color: white;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 17px;
+  transition: 0.2s;
+}
+
+.btn-eliminar:hover {
+  background: #ff6b5a;
+}
+
+.estrella {
+  color: #f1c40f;
+  font-size: 20px;
+}
+
+/* ------------------------------ */
+/*            RESPONSIVE          */
+/* ------------------------------ */
+
+@media (max-width: 768px) {
+  .contenedor {
+    width: 95%;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .card {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .btn-eliminar {
+    width: 100%;
+    text-align: center;
+  }
 }

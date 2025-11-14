@@ -1,0 +1,200 @@
+/* ------------------------------ */
+/*        ESTILOS GENERALES       */
+/* ------------------------------ */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #2ecc71, #27ae60);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  padding: 40px;
+  color: white;
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* TREBOLES DE FONDO */
+body::before,
+body::after {
+  content: "🍀";
+  font-size: 180px;
+  position: absolute;
+  opacity: 0.06;
+  z-index: -1;
+}
+
+body::before {
+  top: 20px;
+  left: 20px;
+}
+
+body::after {
+  bottom: 20px;
+  right: 20px;
+}
+
+/* ------------------------------ */
+/*            TÍTULO              */
+/* ------------------------------ */
+
+h1 {
+  text-align: center;
+  font-size: 40px;
+  margin-bottom: 25px;
+  text-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.icono {
+  font-size: 40px;
+}
+
+/* ------------------------------ */
+/*        CONTENEDOR PRINCIPAL    */
+/* ------------------------------ */
+
+.contenedor {
+  width: 900px;
+  background: rgba(0, 0, 0, 0.18);
+  padding: 40px;
+  border-radius: 25px;
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(4px);
+}
+
+/* ------------------------------ */
+/*          FORMULARIO JUEGO      */
+/* ------------------------------ */
+
+form {
+  background: white;
+  padding: 25px;
+  border-radius: 20px;
+  margin-bottom: 30px;
+  color: #1e8449;
+  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.15);
+  display: grid;
+  gap: 15px;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+input,
+select {
+  width: 100%;
+  padding: 12px;
+  border-radius: 12px;
+  border: 2px solid #2ecc71;
+  font-size: 15px;
+  background: #eaffea;
+  transition: 0.2s ease;
+}
+
+input:focus,
+select:focus {
+  border-color: #1e8449;
+  outline: none;
+}
+
+.btn-agregar {
+  width: 100%;
+  background: #1e8449;
+  color: white;
+  border: none;
+  padding: 14px;
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 17px;
+  transition: 0.2s ease;
+}
+
+.btn-agregar:hover {
+  background: #27ae60;
+}
+
+/* ------------------------------ */
+/*            CARD JUEGO          */
+/* ------------------------------ */
+
+.card {
+  background: #27ae60;
+  padding: 25px;
+  margin: 20px 0;
+  border-radius: 18px;
+  color: white;
+  box-shadow: 0 5px 18px rgba(0, 0, 0, 0.25);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card .info {
+  font-size: 17px;
+}
+
+.card h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+/* Botón eliminar */
+.btn-eliminar {
+  background: #e74c3c;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 14px;
+  color: white;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 17px;
+  transition: 0.2s;
+}
+
+.btn-eliminar:hover {
+  background: #ff6b5a;
+}
+
+.estrella {
+  color: #f1c40f;
+  font-size: 20px;
+}
+
+/* ------------------------------ */
+/*            RESPONSIVE          */
+/* ------------------------------ */
+
+@media (max-width: 768px) {
+  .contenedor {
+    width: 95%;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .card {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .btn-eliminar {
+    width: 100%;
+    text-align: center;
+  }
+}
