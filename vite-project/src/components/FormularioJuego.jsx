@@ -23,7 +23,6 @@ function FormularioJuego({ onAgregar }) {
   return (
     <form className="formulario" onSubmit={handleSubmit}>
       <input
-        className="input"
         type="text"
         placeholder="Título del juego"
         value={titulo}
@@ -31,7 +30,6 @@ function FormularioJuego({ onAgregar }) {
       />
 
       <input
-        className="input"
         type="text"
         placeholder="Género"
         value={genero}
@@ -39,9 +37,8 @@ function FormularioJuego({ onAgregar }) {
       />
 
       <div className="campo-puntuacion">
-        <label className="label">Puntuación (1 a 5)</label>
+        <label>Puntuación (1 a 5)</label>
         <input
-          className="input-num"
           type="number"
           min="1"
           max="5"
