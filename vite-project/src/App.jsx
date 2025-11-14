@@ -26,7 +26,8 @@ function App() {
     <div style={{ textAlign: 'center', padding: 20 }}>
       <h1>🎮 Proyecto Final 77 - GameTracker</h1>
       <FormularioJuego onAgregar={handleAgregar} />
-      <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center' }}>
+      <div className="contenedor-tarjetas">
+
         {juegos.map(j => (
           <TarjetaJuego key={j._id} juego={j} onEliminar={handleEliminar} />
         ))}

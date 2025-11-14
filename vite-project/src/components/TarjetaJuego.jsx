@@ -11,7 +11,7 @@ function TarjetaJuego({ juego, onEliminar }) {
     }}>
       <h3>{juego.titulo}</h3>
       <p>Género: {juego.genero || 'Sin género'}</p>
-      <p>Horas: {juego.horasJugadas || 0}</p>
+      {/* BORRADA LA LÍNEA DE HORAS */}
       <p>Puntuación: {juego.puntuacion || 0} ⭐</p>
       <button onClick={() => onEliminar(juego._id)}>Eliminar</button>
     </div>

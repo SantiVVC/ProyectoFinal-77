@@ -1,42 +1,112 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+/* ======== GENERAL ======== */
+body {
+  background: #121212;
+  color: white;
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+h1 {
   text-align: center;
+  margin-top: 30px;
+  font-size: 32px;
+  color: #e5e5e5;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+/* ======== FORMULARIO ======== */
+.formulario {
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  gap: 12px;
+  margin-top: 20px;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.input {
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #444;
+  background: #1e1e1e;
+  color: white;
+  width: 180px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.input:focus {
+  outline: 2px solid #6a5acd;
+}
+
+.campo-puntuacion {
+  display: flex;
+  flex-direction: column;
+  color: white;
+}
+
+.label {
+  margin-bottom: 4px;
+  font-size: 14px;
+}
+
+.input-num {
+  width: 60px;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #444;
+  background: #1e1e1e;
+  color: white;
+}
+
+.btn-agregar {
+  padding: 10px 20px;
+  background: #6a5acd;
+  border: none;
+  border-radius: 6px;
+  color: white;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.btn-agregar:hover {
+  background: #7c6df2;
+}
+
+/* ======== TARJETAS ======== */
+.contenedor-tarjetas {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 30px;
 }
 
 .card {
-  padding: 2em;
+  background: #1e1e1e;
+  border-radius: 12px;
+  width: 230px;
+  padding: 20px;
+  margin: 15px;
+  box-shadow: 0px 4px 15px rgba(0,0,0,0.4);
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
 }
 
-.read-the-docs {
-  color: #888;
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 6px 20px rgba(0,0,0,0.6);
+}
+
+.card h3 {
+  margin-top: 0;
+  color: #a78bfa;
+}
+
+.card button {
+  background: #e63946;
+  border: none;
+  color: white;
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 15px;
+}
+
+.card button:hover {
+  background: #ff4e5c;
 }
